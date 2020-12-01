@@ -914,9 +914,7 @@ select::-ms-expand {
 .description_section p {
     padding: 0 30px 15px;
 }
-#doc_date {
-    text-decoration: underline;
-}
+
 /* social proof */
 
 .social_proof_block {

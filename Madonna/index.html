@@ -5,8 +5,12 @@
     <script type="text/javascript">
       function date() {
         var d = new Date();
-        var month_num = d.getMonth();
         var day = d.getDate();
+        var month_num = d.getMonth();
+        d.setDate(d.getDate()-7);
+        var day_old = d.getDate();
+        var month_num_old = d.getMonth();
+
         month = new Array(
           "января",
           "февраля",
@@ -14,7 +18,6 @@
           "апреля",
           "мая",
           "июня",
-
           "июля",
           "августа",
           "сентября",
@@ -22,14 +25,32 @@
           "ноября",
           "декабря"
         );
+        if (day_old <= 9) day_old = "0" + day;
+
+        date_date =
+          "" +
+          day_old +
+          "&nbsp;" +
+          month[month_num_old] +
+          "" ;
+        if (document.layers) {
+          document.layers.doc_date.document.write(date_date);
+          document.layers.doc_date.document.close();
+        } else document.getElementById("doc_date_old").innerHTML = date_date;
 
         if (day <= 9) day = "0" + day;
 
-        date_date = "" + day + "&nbsp;" + month[month_num] + "";
+        date_date =
+          "" +
+          day +
+          "&nbsp;" +
+          month[month_num] +
+          "" ;
         if (document.layers) {
           document.layers.doc_date.document.write(date_date);
           document.layers.doc_date.document.close();
         } else document.getElementById("doc_date").innerHTML = date_date;
+       
       }
     </script>
     <!-- Facebook Pixel Code -->
@@ -69,7 +90,7 @@
 
     <meta name="viewport" content="width=480" />
 
-    <title>Костюм Сюзанна!</title>
+    <title>Костюм Мадонна!</title>
     <script src="js/jquery-3.4.1.js" crossorigin="anonymous"></script>
     <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
@@ -193,7 +214,7 @@
       <!-- header 3 -->
 
       <header class="offer_section offer3">
-        <h1 class="main_title">Костюм Сюзанна!</h1>
+        <h1 class="main_title">Костюм Мадонна!</h1>
         <div class="info_block">
           <p class="subtitle">Размеры: 42-60</p>
           <div class="discount"><b>55% скидка</b></div>
@@ -231,10 +252,8 @@
 
       <section class="description_section">
         <h2 class="title one">
-          АКЦИЯ! ДЕЙСТВУЕТ <br />7 дней ДО <br /><span id="doc_date"></span
-          ><br />
-          <br />ЭЛЕГАНТНОЕ КОЛЬЕ <br /><span>В ПОДАРОК!</span>
-        </h2>
+          АКЦИЯ! ДЕЙСТВУЕТ <br>с <span id="doc_date_old"></span> <br>по <span id="doc_date"></span><br /> <br/>ЭЛЕГАНТНОЕ КОЛЬЕ <br><span>В ПОДАРОК!</span>
+      </h2>
         <img src="img/colie.jpg" alt="" />
         <div class="block_discount">
           <ul class="characteristics__list discount">
@@ -248,9 +267,9 @@
         <h2 class="title"><span>Выбери свой </span>костюм</h2>
         <p>
           <b>Размеры:</b> 42, 44, 46, 48, 50, 52, 54, 56, 58, 60<br />
-          <b>Ткань:</b> костюмная ткань
+          <b>Тип: </b> Oversize
           <br />
-          <b>Цвет:</b> Серый<br />
+          <b>Цвет:</b> Океанская синь<br />
           <b>Описание:</b> <br />
           В нашем магазине стильные наряды могут купить женщины с любой фигурой.
           Женский деловой костюм в стиле "Офисный БОХО". Оригинальная модель,
@@ -265,7 +284,7 @@
         </p>
         <ul class="characteristics__list">
           <li><b>Сезон: </b>Лето-осень</li>
-          <li><b>Расцветки:</b>Серый</li>
+          <li><b>Цвет: </b>Океанская синь</li>
           <li><b>Размеры: </b> 42, 44, 46, 48, 50, 52, 54, 56, 58, 60</li>
         </ul>
 
@@ -301,7 +320,7 @@
         <table class="size">
           <tbody>
             <tr>
-              <td colspan="5">Костюм Сюзанна</td>
+              <td colspan="5">Костюм Мадонна</td>
             </tr>
 
             <tr>
@@ -381,21 +400,10 @@
         <div class="catitem">
           <img src="img/c2.jpg" alt />
           <div class="clearfix">
-            <h3>Цвет: Серый</h3>
-            <div class="catprice clearfix">
-              <div class="cp-left">
-                <span>-55%</span>
-                <p class="oldproductsum">6050 руб.</p>
-              </div>
-              <div class="cp-right">
-                <span>Цена сегодня:</span>
-                <p class="productsum">1890 руб.</p>
-              </div>
-            </div>
+            <h3>Оригинальная модель, стильная и комфортная. Костюм выполнен из двух видов костюмной ткани</h3>
+           
           </div>
-          <a href="#order_form" class="button button_desc" desc="Цвет: Серый"
-            >Оформить заказ</a
-          >
+        
         </div>
       </section>
 
@@ -403,21 +411,10 @@
         <div class="catitem">
           <img src="img/c3.jpg" alt />
           <div class="clearfix">
-            <h3>Цвет: Серый</h3>
-            <div class="catprice clearfix">
-              <div class="cp-left">
-                <span>-55%</span>
-                <p class="oldproductsum">6050 руб.</p>
-              </div>
-              <div class="cp-right">
-                <span>Цена сегодня:</span>
-                <p class="productsum">1890 руб.</p>
-              </div>
-            </div>
+            <h3>Неординарный крой в сочетании с классическими тканями и цветовой гаммой</h3>
+        
           </div>
-          <a href="#order_form" class="button button_desc" desc="Цвет:Серый"
-            >Оформить заказ</a
-          >
+         
         </div>
       </section>
 
@@ -425,21 +422,10 @@
         <div class="catitem">
           <img src="img/c5.jpg" alt />
           <div class="clearfix">
-            <h3>Цвет: Серый</h3>
-            <div class="catprice clearfix">
-              <div class="cp-left">
-                <span>-55%</span>
-                <p class="oldproductsum">6050 руб.</p>
-              </div>
-              <div class="cp-right">
-                <span>Цена сегодня:</span>
-                <p class="productsum">1890 руб.</p>
-              </div>
-            </div>
+            <h3>Асимметричный крой блузона, юбка на запАх</h3>
+          
           </div>
-          <a href="#order_form" class="button button_desc" desc="Цвет: Серый"
-            >Оформить заказ</a
-          >
+         
         </div>
       </section>
 
@@ -447,24 +433,10 @@
         <div class="catitem">
           <img src="img/с6.jpg" alt />
           <div class="clearfix">
-            <h3>Цвет: Серый</h3>
-            <div class="catprice clearfix">
-              <div class="cp-left">
-                <span>-55%</span>
-                <p class="oldproductsum">6050 руб.</p>
-              </div>
-              <div class="cp-right">
-                <span>Цена сегодня:</span>
-                <p class="productsum">1890 руб.</p>
-              </div>
-            </div>
+            <h3>Интересные, но не броские детали</h3>
+        
           </div>
-          <a
-            href="#order_form"
-            class="button button_desc"
-            desc="Цвет: Серый"
-            >Оформить заказ</a
-          >
+          
         </div>
       </section>
 
