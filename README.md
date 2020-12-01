@@ -1,2 +1,2 @@
 # Miranda_Suzanne
-2 lend page
+2 лендинга
